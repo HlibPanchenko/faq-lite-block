@@ -3,13 +3,43 @@
   "apiVersion": 3,
   "name": "create-block/faq-lite-block",
   "version": "0.1.0",
-  "title": "Faq Lite Block",
+  "title": "FAQ",
   "category": "widgets",
-  "icon": "smiley",
-  "description": "Example block scaffolded with Create Block tool.",
+  "icon": "editor-help",
+  "description": "A simple FAQ block with accordion and list display modes, including Schema.org markup.",
   "example": {},
   "supports": {
-    "html": false
+    "html": false,
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "typography": {
+      "fontSize": true
+    }
+  },
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "question": "",
+          "answer": ""
+        }
+      ]
+    },
+    "displayMode": {
+      "type": "string",
+      "default": "accordion"
+    },
+    "firstOpenByDefault": {
+      "type": "boolean",
+      "default": false
+    }
   },
   "textdomain": "faq-lite-block",
   "editorScript": "file:./index.js",

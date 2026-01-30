@@ -1,1 +1,51 @@
-.wp-block-create-block-faq-lite-block{border:1px dotted red}
+/*!*******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/faq-lite-block/editor.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************/
+.faq-editor {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+}
+.faq-editor .faq-editor__item {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.faq-editor .faq-editor__toolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.faq-editor .faq-editor__item-number {
+  font-size: 12px;
+  font-weight: 600;
+  color: #757575;
+  margin-left: auto;
+  padding: 0 4px;
+}
+.faq-editor .faq-editor__question {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 0 0 8px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  min-height: 1.5em;
+}
+.faq-editor .faq-editor__answer {
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  min-height: 3em;
+}
+.faq-editor .faq-editor__add-button {
+  width: 100%;
+  justify-content: center;
+}
