@@ -1,55 +1,59 @@
-=== Faq Lite Block ===
-Contributors:      The WordPress Contributors
-Tags:              block
+=== FAQ Lite Block ===
+Contributors:      Hlib
+Tags:              faq, block, accordion, schema, gutenberg
 Tested up to:      6.8
 Stable tag:        0.1.0
+Requires at least: 6.8
+Requires PHP:      7.4
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Example block scaffolded with Create Block tool.
+A lightweight FAQ block for the WordPress block editor with accordion/list display modes and built-in Schema.org (FAQPage) markup.
 
 == Description ==
 
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
+FAQ Lite Block adds a native Gutenberg block that lets you create FAQ sections directly in the editor. No shortcodes, no custom post types — just a single block.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+**Features:**
+
+* **Two display modes** — Accordion (collapsible, one item open at a time) or plain List (all answers visible).
+* **Schema.org FAQPage JSON-LD** — automatically generated and embedded in the page source. Helps search engines display rich results.
+* **Accessible** — accordion uses `aria-expanded`, `aria-controls`, `role="region"`, and keyboard-navigable buttons.
+* **Reorder, add, delete** — manage FAQ items with up/down/delete buttons right in the editor.
+* **Rich text answers** — bold, italic, and links inside answers.
+* **Optional "first open"** — in accordion mode, optionally expand the first item by default.
+* **Supports color, spacing, typography** — uses standard block editor controls.
+* **No dependencies** — vanilla JS on the frontend, no jQuery, no extra libraries.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
-1. Upload the plugin files to the `/wp-content/plugins/faq-lite-block` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
-
+1. Upload the `faq-lite-block` folder to `/wp-content/plugins/`, or install the plugin through the WordPress plugins screen.
+2. Activate the plugin through the "Plugins" screen in WordPress.
+3. In the block editor, search for **FAQ** and insert the block.
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= How do I switch between accordion and list mode? =
 
-An answer to that question.
+Select the FAQ block, open the block settings panel on the right, and choose the display mode under "FAQ Settings".
 
-= What about foo bar? =
+= Does it output Schema.org markup? =
 
-Answer to foo bar dilemma.
+Yes. Both display modes embed a `<script type="application/ld+json">` block with valid FAQPage structured data. You can verify it with Google's Rich Results Test.
 
-== Screenshots ==
+= Can I have multiple FAQ blocks on one page? =
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+Yes. Each accordion instance works independently, and the frontend script assigns unique IDs to avoid conflicts.
+
+= Does the accordion require jQuery? =
+
+No. The frontend script is vanilla JavaScript with no dependencies.
 
 == Changelog ==
 
 = 0.1.0 =
-* Release
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
+* Initial release.
+* Accordion and list display modes.
+* Schema.org FAQPage JSON-LD output.
+* Reorder, add, and delete FAQ items in the editor.
+* ARIA-compliant accordion with keyboard support.

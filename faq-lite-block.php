@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Faq Lite Block
- * Description:       Example block scaffolded with Create Block tool.
+ * Description:       A lightweight FAQ block with accordion/list modes and Schema.org FAQPage markup.
  * Version:           0.1.0
  * Requires at least: 6.8
  * Requires PHP:      7.4
